@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "AZ-204-Container-App/1.0.0": {
         "dependencies": {
+          "Azure.Storage.Queues": "12.4.2",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -154,7 +155,7 @@
           "mscorlib": "4.0.0.0",
           "netstandard": "2.1.0.0",
           "System.AppContext": "4.2.2.0",
-          "System.Buffers": "4.0.2.0",
+          "System.Buffers.Reference": "4.0.2.0",
           "System.Collections.Concurrent": "4.0.15.0",
           "System.Collections": "4.1.2.0",
           "System.Collections.Immutable": "1.2.5.0",
@@ -174,7 +175,7 @@
           "System.Data": "4.0.0.0",
           "System.Diagnostics.Contracts": "4.0.4.0",
           "System.Diagnostics.Debug": "4.1.2.0",
-          "System.Diagnostics.DiagnosticSource": "4.0.5.0",
+          "System.Diagnostics.DiagnosticSource.Reference": "4.0.5.0",
           "System.Diagnostics.EventLog": "4.0.2.0",
           "System.Diagnostics.FileVersionInfo": "4.0.4.0",
           "System.Diagnostics.Process": "4.2.2.0",
@@ -208,7 +209,7 @@
           "System.Linq.Expressions": "4.2.2.0",
           "System.Linq.Parallel": "4.0.4.0",
           "System.Linq.Queryable": "4.0.4.0",
-          "System.Memory": "4.2.1.0",
+          "System.Memory.Reference": "4.2.1.0",
           "System.Net": "4.0.0.0",
           "System.Net.Http": "4.2.2.0",
           "System.Net.HttpListener": "4.0.2.0",
@@ -227,7 +228,7 @@
           "System.Net.WebSockets.Client": "4.1.2.0",
           "System.Net.WebSockets": "4.1.2.0",
           "System.Numerics": "4.0.0.0",
-          "System.Numerics.Vectors": "4.1.6.0",
+          "System.Numerics.Vectors.Reference": "4.1.6.0",
           "System.ObjectModel": "4.1.2.0",
           "System.Reflection.DispatchProxy": "4.0.6.0",
           "System.Reflection": "4.2.2.0",
@@ -277,14 +278,14 @@
           "System.Text.Encoding": "4.1.2.0",
           "System.Text.Encoding.Extensions": "4.1.2.0",
           "System.Text.Encodings.Web": "4.0.5.0",
-          "System.Text.Json": "4.0.1.0",
+          "System.Text.Json.Reference": "4.0.1.0",
           "System.Text.RegularExpressions": "4.2.2.0",
           "System.Threading.Channels": "4.0.2.0",
           "System.Threading": "4.1.2.0",
           "System.Threading.Overlapped": "4.1.2.0",
           "System.Threading.Tasks.Dataflow": "4.6.5.0",
           "System.Threading.Tasks": "4.1.2.0",
-          "System.Threading.Tasks.Extensions": "4.3.1.0",
+          "System.Threading.Tasks.Extensions.Reference": "4.3.1.0",
           "System.Threading.Tasks.Parallel": "4.0.4.0",
           "System.Threading.Thread": "4.1.2.0",
           "System.Threading.ThreadPool": "4.1.2.0",
@@ -314,6 +315,73 @@
           "AZ-204-Container-App.dll": {}
         }
       },
+      "Azure.Core/1.4.1": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.0.0",
+          "System.Buffers": "4.5.0",
+          "System.Diagnostics.DiagnosticSource": "4.6.0",
+          "System.Memory": "4.5.3",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Text.Json": "4.6.0",
+          "System.Threading.Tasks.Extensions": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Core.dll": {
+            "assemblyVersion": "1.4.1.0",
+            "fileVersion": "1.400.120.41802"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Core.dll": {}
+        }
+      },
+      "Azure.Storage.Common/12.5.2": {
+        "dependencies": {
+          "Azure.Core": "1.4.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Storage.Common.dll": {
+            "assemblyVersion": "12.5.2.0",
+            "fileVersion": "12.500.220.43102"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Storage.Common.dll": {}
+        }
+      },
+      "Azure.Storage.Queues/12.4.2": {
+        "dependencies": {
+          "Azure.Core": "1.4.1",
+          "Azure.Storage.Common": "12.5.2",
+          "System.Text.Json": "4.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Storage.Queues.dll": {
+            "assemblyVersion": "12.4.2.0",
+            "fileVersion": "12.400.220.43102"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Storage.Queues.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "4.700.19.46214"
+          }
+        },
+        "compile": {
+          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
+      "System.Buffers/4.5.0": {},
+      "System.Diagnostics.DiagnosticSource/4.6.0": {},
+      "System.Memory/4.5.3": {},
+      "System.Numerics.Vectors/4.5.0": {},
+      "System.Text.Json/4.6.0": {},
+      "System.Threading.Tasks.Extensions/4.5.2": {},
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Antiforgery.dll": {}
@@ -1094,7 +1162,7 @@
         },
         "compileOnly": true
       },
-      "System.Buffers/4.0.2.0": {
+      "System.Buffers.Reference/4.0.2.0": {
         "compile": {
           "System.Buffers.dll": {}
         },
@@ -1214,7 +1282,7 @@
         },
         "compileOnly": true
       },
-      "System.Diagnostics.DiagnosticSource/4.0.5.0": {
+      "System.Diagnostics.DiagnosticSource.Reference/4.0.5.0": {
         "compile": {
           "System.Diagnostics.DiagnosticSource.dll": {}
         },
@@ -1418,7 +1486,7 @@
         },
         "compileOnly": true
       },
-      "System.Memory/4.2.1.0": {
+      "System.Memory.Reference/4.2.1.0": {
         "compile": {
           "System.Memory.dll": {}
         },
@@ -1532,7 +1600,7 @@
         },
         "compileOnly": true
       },
-      "System.Numerics.Vectors/4.1.6.0": {
+      "System.Numerics.Vectors.Reference/4.1.6.0": {
         "compile": {
           "System.Numerics.Vectors.dll": {}
         },
@@ -1832,7 +1900,7 @@
         },
         "compileOnly": true
       },
-      "System.Text.Json/4.0.1.0": {
+      "System.Text.Json.Reference/4.0.1.0": {
         "compile": {
           "System.Text.Json.dll": {}
         },
@@ -1874,7 +1942,7 @@
         },
         "compileOnly": true
       },
-      "System.Threading.Tasks.Extensions/4.3.1.0": {
+      "System.Threading.Tasks.Extensions.Reference/4.3.1.0": {
         "compile": {
           "System.Threading.Tasks.Extensions.dll": {}
         },
@@ -2013,6 +2081,76 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Azure.Core/1.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6LbGLiZwlU6SfOaINCfrQ+f91bRWZ8XvB90Qfm69x1t3z+5D4jmXnQiuPYPZcgtxFjPKA3IwyHGuDZRkSo1Urg==",
+      "path": "azure.core/1.4.1",
+      "hashPath": "azure.core.1.4.1.nupkg.sha512"
+    },
+    "Azure.Storage.Common/12.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Sd6C0TgGkzEHcNv95jO52vN1TroTrBRCJJOCog6NEfUoAnmxUus4j9QraDfITvxIIMdyKg7WXB6vX58Bq2/WaQ==",
+      "path": "azure.storage.common/12.5.2",
+      "hashPath": "azure.storage.common.12.5.2.nupkg.sha512"
+    },
+    "Azure.Storage.Queues/12.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JaE6sIHA9MoOThTBU6+Z+fZcLBVzM8W/sdrak9egRCUpE3mAyq9FKDIwMZLaQUxtY+YgHUcKWnOmn8pgdu/icg==",
+      "path": "azure.storage.queues/12.4.2",
+      "hashPath": "azure.storage.queues.12.4.2.nupkg.sha512"
+    },
+    "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K63Y4hORbBcKLWH5wnKgzyn7TOfYzevIEwIedQHBIkmkEBA9SCqgvom+XTuE+fAFGvINGkhFItaZ2dvMGdT5iw==",
+      "path": "microsoft.bcl.asyncinterfaces/1.0.0",
+      "hashPath": "microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512"
+    },
+    "System.Buffers/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
+      "path": "system.buffers/4.5.0",
+      "hashPath": "system.buffers.4.5.0.nupkg.sha512"
+    },
+    "System.Diagnostics.DiagnosticSource/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mbBgoR0rRfl2uimsZ2avZY8g7Xnh1Mza0rJZLPcxqiMWlkGukjmRkuMJ/er+AhQuiRIh80CR/Hpeztr80seV5g==",
+      "path": "system.diagnostics.diagnosticsource/4.6.0",
+      "hashPath": "system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "path": "system.memory/4.5.3",
+      "hashPath": "system.memory.4.5.3.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "System.Text.Json/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4F8Xe+JIkVoDJ8hDAZ7HqLkjctN/6WItJIzQaifBwClC7wmoLSda/Sv2i6i1kycqDb3hWF4JCVbpAweyOKHEUA==",
+      "path": "system.text.json/4.6.0",
+      "hashPath": "system.text.json.4.6.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks.Extensions/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BG/TNxDFv0svAzx8OiMXDlsHfGw623BZ8tCXw4YLhDFDvDhNUEV58jKYMGRnkbJNm7c3JNNJDiN7JBMzxRBR2w==",
+      "path": "system.threading.tasks.extensions/4.5.2",
+      "hashPath": "system.threading.tasks.extensions.4.5.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",
@@ -2664,7 +2802,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Buffers/4.0.2.0": {
+    "System.Buffers.Reference/4.0.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -2764,7 +2902,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Diagnostics.DiagnosticSource/4.0.5.0": {
+    "System.Diagnostics.DiagnosticSource.Reference/4.0.5.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -2934,7 +3072,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Memory/4.2.1.0": {
+    "System.Memory.Reference/4.2.1.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3029,7 +3167,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Numerics.Vectors/4.1.6.0": {
+    "System.Numerics.Vectors.Reference/4.1.6.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3279,7 +3417,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Text.Json/4.0.1.0": {
+    "System.Text.Json.Reference/4.0.1.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3314,7 +3452,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Threading.Tasks.Extensions/4.3.1.0": {
+    "System.Threading.Tasks.Extensions.Reference/4.3.1.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

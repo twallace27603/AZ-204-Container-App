@@ -40,6 +40,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Azure.Storage.Queues": {
+              "target": "Package",
+              "version": "[12.4.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -5,4 +5,8 @@
     <RootNamespace>AZ_204_Container_App</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Queues" Version="12.4.2" />
+  </ItemGroup>
+
 </Project>
